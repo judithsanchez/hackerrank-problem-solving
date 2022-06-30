@@ -11,7 +11,7 @@
          "skipFiles": [
             "<node_internals>/**"
          ],
-         "program": "${workspaceFolder}/diagonal-difference.js"
+         "program": "${workspaceFolder}/apple-and-orange.js"
       }
    ]
 }
