@@ -11,7 +11,7 @@
          "skipFiles": [
             "<node_internals>/**"
          ],
-         "program": "${workspaceFolder}/angry-professor.js"
+         "program": "${workspaceFolder}/bill-division.js"
       }
    ]
 }
