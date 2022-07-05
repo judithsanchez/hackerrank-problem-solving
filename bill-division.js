@@ -8,4 +8,3 @@ function bonAppetit(bill, k, b) {
    return (b <= annasDebt ? console.log("Bon Appetit") : console.log(b - annasDebt))
 }
 
-console.log(bonAppetit([3, 10, 2, 9],1,12))

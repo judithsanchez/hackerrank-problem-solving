@@ -11,7 +11,7 @@
          "skipFiles": [
             "<node_internals>/**"
          ],
-         "program": "${workspaceFolder}/bill-division.js"
+         "program": "${workspaceFolder}/migratory-birds.js"
       }
    ]
 }
