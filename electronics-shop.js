@@ -16,5 +16,6 @@ function getMoneySpent(keyboards, drives, b) {
    return -1
 }
 
-console.log(getMoneySpent([40, 60, 50], [8, 5, 12], 60))
-console.log(getMoneySpent([3, 1], [5, 2, 8], 10))
+// console.log(getMoneySpent([40, 60, 50], [8, 5, 12], 60))
+// console.log(getMoneySpent([3, 1], [5, 2, 8], 10))
+

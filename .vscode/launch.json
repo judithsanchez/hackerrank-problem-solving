@@ -11,7 +11,7 @@
          "skipFiles": [
             "<node_internals>/**"
          ],
-         "program": "${workspaceFolder}/electronics-shop.js"
+         "program": "${workspaceFolder}/cats-and-a-mouse.js"
       }
    ]
 }
