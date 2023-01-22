@@ -1,37 +1,20 @@
 function pickingNumbers(a) {
-   a.sort((a,b) => a-b)
-
-   let multiset = []
-
-   for (let i = 0; i < a.length; i++) {
-      let subArr = []
-
-      for (let j = 0; j < a.length; j++) {
-         if (Math.abs(a[i]-a[j]) <= 1) {
-            subArr.push(a[j])
-         }
-      }
-      multiset.push(subArr)
-   }
-
-   multiset.sort((a,b) => b.length-a.length)
-
-   let finalResult =  []
-
-   for (let i = 0; i < multiset[0].length; i++) {
-      let subArr = []
-
-      for (let j = 0; j < multiset[0].length; j++) {
-         if (Math.abs(multiset[0][i]-multiset[0][j]) <= 1) {
-            subArr.push(multiset[0][j])
-         }
-      }
-      finalResult.push(subArr)
-   }
-
-   
-   return finalResult.length
+  // Initialize maxCount variable with 0
+  let maxCount = 0;
+  // Create an array of 101 elements filled with 0
+  let counts = new Array(101).fill(0);
+  // counts = [0, 0, 0, 0, 0, 0, 0, ...] until we get to 101 elements
+  // It is 101 because the range is 1-100
+  // Iterate over the input array
+  for (let i = 0; i < a.length; i++) {
+    // Increase the count of the current element in the counts array
+    counts[a[i]]++;
+  }
+  // Iterate over the counts array
+  for (let i = 1; i < counts.length; i++) {
+    // Compare the count of the current element and the count of the previous element
+    maxCount = Math.max(maxCount, counts[i] + counts[i - 1]);
+  }
+  // Return the maxCount variable as the result
+  return maxCount;
 }
-
-
-console.log(pickingNumbers([4, 6, 5, 3, 3, 1]))
