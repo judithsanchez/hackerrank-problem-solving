@@ -11,7 +11,7 @@
          "skipFiles": [
             "<node_internals>/**"
          ],
-         "program": "${workspaceFolder}/designer-pdf-viewer.js"
+         "program": "${workspaceFolder}/the-utopian-tree.js"
       }
    ]
 }
