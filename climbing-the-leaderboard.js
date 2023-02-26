@@ -1,4 +1,4 @@
-// Because this is faster than pushing the number and sorting after every iteration.
+/* // Because this is faster than pushing the number and sorting after every iteration.
 // This will split in the middle the array and determine the direction where it should iterate.
 function binarySearch(arr, num) {
   // Should be 0 because that is the start of the array!
@@ -42,6 +42,41 @@ function climbingLeaderboard(ranked, player) {
       setRanked.splice(index, 0, target);
     }
     // It gets the right index and adds it to the player's rank.
+    playerRank.push(index + 1);
+  }
+  return playerRank;
+}
+
+console.log(climbingLeaderboard([100, 90, 90, 80], [70, 80, 105]));
+ */
+
+
+
+
+function binarySearch(arr, num) {
+  let start = 0;
+  let end = arr.length - 1;
+  while (start <= end) {
+    let mid = Math.floor((start + end) / 2);
+    if (arr[mid] <= num) {
+      end = mid - 1;
+    } else {
+      start = mid + 1;
+    }
+  }
+  return start;
+}
+
+function climbingLeaderboard(ranked, player) {
+  let playerRank = [];
+  let setRanked = [...new Set(ranked)];
+  setRanked.sort((a, b) => b - a);
+  for (let i = 0; i < player.length; i++) {
+    let target = player[i];
+    let index = binarySearch(setRanked, target);
+    if (index === setRanked.length && setRanked[index - 1] !== target) {
+      setRanked.splice(index, 0, target);
+    }
     playerRank.push(index + 1);
   }
   return playerRank;
