@@ -11,7 +11,7 @@
          "skipFiles": [
             "<node_internals>/**"
          ],
-         "program": "${workspaceFolder}/beautiful-days-at-the-movies.js"
+         "program": "${workspaceFolder}/viral-advertising.js"
       }
    ]
 }
